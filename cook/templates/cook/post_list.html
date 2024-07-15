@@ -1,0 +1,16 @@
+{% extends 'cook/base.html' %}
+
+{% block content %}
+{% for post in post_list %}
+<div class="card mb-3">
+    <h4 class="card-header bg-dark text-white">
+    {{post.title}}
+    </h4>
+    <div class="card-body">
+      <p>{{post.created_at}}</p>
+      <a href="#!" class="btn btn-primary btn-dark">続きを読む</a>
+    </div>
+</div>
+  
+{% endfor %}
+{% endblock %}
