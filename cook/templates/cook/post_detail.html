@@ -1,0 +1,14 @@
+{% extends 'cook/base.html' %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header bg-dark text-white">
+        <p>{{post.title}}</p>
+    </div>
+    <div class="card-body">
+      <p>{{post.text|linebreaksbr}}</p>
+
+    </div>
+</div>
+
+{% endblock %}

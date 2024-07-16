@@ -1,6 +1,16 @@
 {% extends 'cook/base.html' %}
 
 {% block content %}
+<div class="jumbotron">
+  <h2 class="display-3">料理のレシピを投稿しよう！</h2>
+  <p class="lead">自分のお気に入りの料理を紹介しよう。</p>
+  <hr class="my-2">
+  <p class="lead">
+    <a class="btn btn-primary btn-lg btn-dark" href="#!" role="button">投稿する</a>
+  </p>
+</div>
+
+
 {% for post in post_list %}
 <div class="card mb-3">
     <h4 class="card-header bg-dark text-white">
@@ -8,7 +18,7 @@
     </h4>
     <div class="card-body">
       <p>{{post.created_at}}</p>
-      <a href="#!" class="btn btn-primary btn-dark">続きを読む</a>
+      <a href="{% url 'cook:detail' post.pk %}" class="btn btn-primary btn-dark">続きを読む</a>
     </div>
 </div>
   
